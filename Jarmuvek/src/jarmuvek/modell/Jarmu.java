@@ -16,6 +16,10 @@ public class Jarmu {
         this.megerkezett = megerkezett;
     }
 
+    public Jarmu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public boolean isBeinditva() {
         return beinditva;
     }
@@ -39,7 +43,7 @@ public class Jarmu {
     }
 
     public void leallit() {
-        if (beinditva = true) {
+        if (beinditva = true || uzemanyag == false) {
             beinditva = false;
         }
     }
@@ -57,6 +61,10 @@ public class Jarmu {
     }
 
     public boolean halad() {
-        return true;
+        if (uzemanyag = true && beinditva == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

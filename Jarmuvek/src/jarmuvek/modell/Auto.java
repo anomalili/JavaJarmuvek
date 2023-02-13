@@ -8,11 +8,19 @@ package jarmuvek.modell;
  *
  * @author makra
  */
-public abstract class Auto extends Jarmu {
+public class Auto extends Jarmu {
 
     public Auto(boolean defekt, boolean beinditva, boolean uzemanyag, boolean megerkezett) {
         super(beinditva, uzemanyag, megerkezett);
         this.defekt = defekt;
+    }
+
+    public Auto() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public boolean isDefekt() {
+        return defekt;
     }
 
     private boolean defekt;
@@ -23,19 +31,10 @@ public abstract class Auto extends Jarmu {
         }
     }
 
+    @Override
     public boolean halad() {
-        if (uzemanyag = true && beinditva == true) {
-            return true;
-        } else {
-            return false;
-        }
-
-    }
-    
-     public void leallit() {
-        if (beinditva = true || uzemanyag == false) {
-            beinditva = false;
-        }
+        super.halad();
+        return true;
     }
 
 }

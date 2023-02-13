@@ -28,17 +28,27 @@ public class Jarmu {
         return megerkezett;
     }
 
-    private boolean beinditva;
-    private boolean uzemanyag;
+    boolean beinditva;
+    boolean uzemanyag;
     private boolean megerkezett;
 
     public void beindit() {
+        if (uzemanyag == true && beinditva == false) {
+            beinditva = true;
+        }
     }
 
     public void leallit() {
+        if (beinditva = true) {
+            beinditva = false;
+        }
     }
 
-    public void tankol() {
+    public boolean tankol() {
+        if (uzemanyag = false && beinditva == false) {
+            uzemanyag = true;
+        }
+        return true;
     }
 
     @Override

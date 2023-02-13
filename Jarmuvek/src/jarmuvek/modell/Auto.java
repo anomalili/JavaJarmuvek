@@ -8,16 +8,34 @@ package jarmuvek.modell;
  *
  * @author makra
  */
-public class Auto extends Jarmu {
+public abstract class Auto extends Jarmu {
+
+    public Auto(boolean defekt, boolean beinditva, boolean uzemanyag, boolean megerkezett) {
+        super(beinditva, uzemanyag, megerkezett);
+        this.defekt = defekt;
+    }
 
     private boolean defekt;
-    
+
     public void kereketCserel() {
-    }
-    
-    public boolean halad() {
-        return false;
+        if (defekt = true) {
+            defekt = false;
+        }
     }
 
+    public boolean halad() {
+        if (uzemanyag = true && beinditva == true) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    
+     public void leallit() {
+        if (beinditva = true || uzemanyag == false) {
+            beinditva = false;
+        }
+    }
 
 }
